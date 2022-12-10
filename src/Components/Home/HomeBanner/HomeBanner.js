@@ -3,7 +3,7 @@ import React from "react";
 const HomeBanner = () => {
   return (
     <div>
-      <div className="hero bg-gradient-to-r  from-emerald-100 via-cyan-200 to-sky-200 text-gray-700">
+      <div className="hero bg-gradient-to-r  from-emerald-400 via-cyan-500 to-sky-600 text-gray-100">
         <div className="hero-content h-[100vh] flex-col lg:flex-row-reverse">
           <img
             src="https://i.ibb.co/z2C3htR/1665751542229-removebg.png"
