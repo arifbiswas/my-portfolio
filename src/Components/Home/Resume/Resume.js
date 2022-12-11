@@ -1,16 +1,24 @@
 import React from 'react';
-
+import { motion  } from "framer-motion"
 import resume from './resume.jpg'
 import ResumeDownloadButton from './ResumeDownloadButton';
 const Resume = () => {
     return (
-       <div className='bg-gradient-to-l from-purple-600 via-violet-700 to-violet-700 py-10'>
-         <div className='w-full h-full'>
-            <img className='mx-auto rounded-md' src={resume} alt="" />
-           <div className='flex justify-center my-5'>
+       <div className='h-[100vh]'>
+         <motion.div 
+         initial ={{opacity : 0, scale: -0}}
+         animate={{opacity : 1, scale : 1}}
+         transition={{duration : 0.4}}
+         className='flex justify-center py-5'>
            <ResumeDownloadButton></ResumeDownloadButton>
-           </div>
-        </div>
+           </motion.div>
+         <motion.div
+          initial ={{opacity : 0, scale: -0}}
+          animate={{opacity : 1, scale : 1}}
+          transition={{duration : 0.4}}
+         className=''>
+            <img className='mx-auto rounded-md' src={resume} alt="" />
+        </motion.div>
        </div>
     );
 };

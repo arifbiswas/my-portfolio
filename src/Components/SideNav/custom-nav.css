@@ -1,0 +1,13 @@
+.bg-layer{
+    background-color: rgb(224, 216, 226);
+    width: 500px;
+    height: 80px;
+    opacity: 80%;
+    border-radius:20px;
+}
+.custom-color{
+    font-size: 72px;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

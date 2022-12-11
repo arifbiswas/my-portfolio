@@ -6,51 +6,37 @@ import {
   FaBoxOpen,
   FaHandshake,
   FaRegFileAlt,
+  FaBook,
+  FaBloggerB
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { motion , } from "framer-motion"
+import { Link, NavLink } from "react-router-dom";
 import ContactModal from "../Home/Contact/ContactModal";
+import "./custom-nav.css";
 const SideNav = () => {
   return (
-    <div className="fixed top-0 lg:top-[30%] z-50 text-white">
-      <div className="collapse">
-        <input type="checkbox" />
-        <div className="collapse-title text-xl font-medium">
-          <div className="flex gap-2 justify-center rounded-md bg-gradient-to-tr from-teal-400 via-cyan-600 to-sky-900 py-2 my-2">
-            <FaBuffer className="w-20 mx-5 h-8 " />
-          </div>
-        </div>
-        <div className="collapse-content transition-all duration-500">
-          <Link to="/">
-            <div className="flex gap-2 justify-center rounded-md bg-gradient-to-tr from-teal-400 via-cyan-600 to-sky-900 py-2 my-2 ">
-              <FaHome className="w-10 h-8 " />
-              <span className="text-lg font-bold">Home</span>
-            </div>
-          </Link>
-          <Link to="projects">
-            <div className="flex gap-2 justify-center rounded-md bg-gradient-to-tr from-teal-400 via-cyan-600 to-sky-900 py-2 my-2">
-              <FaBoxOpen className="w-10 h-8 mb-3" />
-              <span className="text-lg font-bold">Projects</span>
-            </div>
-          </Link>
-          {/* <div className="flex gap-2">
-            <FaBlogger className="w-10 h-8 mb-3" /> <span className="text-lg font-bold">Blogs</span>
-          </div> */}
-          <label
-            htmlFor="contact-modal"
-            className="flex gap-2 justify-center rounded-md bg-gradient-to-tr from-teal-400 via-cyan-600 to-sky-900 py-2 my-2"
-          >
-            <FaHandshake className="w-10 h-8 mb-3" />
-            <span className="text-lg font-bold">Contact</span>
-          </label>
-          <Link to="/resume">
-            <div className="flex gap-2 justify-center rounded-md bg-gradient-to-tr from-teal-400 via-cyan-600 to-sky-900 py-2 my-2">
-              <FaRegFileAlt className="w-10 h-8 mb-3" />
-              <span className="text-lg font-bold">Resume</span>
-            </div>
-          </Link>
-        </div>
-      </div>
-      <ContactModal></ContactModal>
+    <div className="fixed bottom-0 left-0  lg:fixed  md:left-[20%] lg:left-[40%] lg:bottom-12 z-50">
+      <motion.div
+      whileHover={{scale : 1.1}}
+      className="bg-violet-200 opacity-90 p-2 rounded-md  lg:bg-layer flex  md:flex-row lg:flex-row gap-10">
+       <NavLink to="/" 
+       className={({isActive})=>isActive?"flex justify-center items-center border-2 border-gray-700":"flex justify-center items-center"}
+       >
+        <FaHome className="w-full h-16 text-base-200 p-3 hover:p-0 transition-all duration-200" ></FaHome>
+       </NavLink>
+       <NavLink to="/projects"   className={({isActive})=>isActive?"flex justify-center items-center border-2 border-gray-700":"flex justify-center items-center"}>
+        <FaBoxOpen className="w-full h-16 text-base-200 p-3 hover:p-0 transition-all duration-200" ></FaBoxOpen>
+       </NavLink>
+       <NavLink to="/about"  className={({isActive})=>isActive?"flex justify-center items-center border-2 border-gray-700":"flex justify-center items-center"}>
+        <FaBook className="w-full h-16 text-base-200 p-3 hover:p-0 transition-all duration-200" ></FaBook>
+       </NavLink>
+       <NavLink to="/contact"   className={({isActive})=>isActive?"flex justify-center items-center border-2 border-gray-700":"flex justify-center items-center"}>
+        <FaHandshake className="w-full h-16 text-base-200 p-3 hover:p-0 transition-all duration-200" ></FaHandshake>
+       </NavLink>
+       <NavLink to="/blogs"    className={({isActive})=>isActive?"flex justify-center items-center border-2 border-gray-700":"flex justify-center items-center"}>
+        <FaBlogger className="w-full h-16 opacity-100 text-base-200 p-3 hover:p-0 transition-all duration-200" ></FaBlogger>
+       </NavLink>
+      </motion.div>
     </div>
   );
 };
