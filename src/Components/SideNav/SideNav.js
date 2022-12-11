@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import ContactModal from "../Home/Contact/ContactModal";
 const SideNav = () => {
   return (
-    <div className="fixed  top-[30%] z-50 text-white">
+    <div className="fixed top-0 lg:top-[30%] z-50 text-white">
       <div className="collapse">
         <input type="checkbox" />
         <div className="collapse-title text-xl font-medium">

@@ -11,8 +11,9 @@ const HomeBanner = () => {
           />
 
           <div className="">
-            <h1 className="text-5xl font-bold">Front-End Web Developer</h1>
-            <p className="py-6">
+            <h1 className="text-6xl font-bold text-center">Arif Biswas</h1>
+            <h2 className="text-4xl font-bold text-center">Front-End Web Developer</h2>
+            <p className="py-6 text-justify first-letter:text-2xl">
               My name is Arif Biswas, I am react developer, and I study of
               bachelor of business studies . I live in Jatrabari, Dhaka in
               Bangladesh. My specific skill is react.js node.js express.js
