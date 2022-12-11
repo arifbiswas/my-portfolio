@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
             {
                 path: "/singleProjects/:id",
                 element: <SingleProjects></SingleProjects>,
-                loader : ({params}) => fetch(`http://localhost:5000/api/v1/projects/${params.id}`)
+                loader : ({params}) => fetch(`https://my-portfolio-server-arifbiswas.vercel.app/api/v1/projects/${params.id}`)
             },
             {
                 path: "/blogs",

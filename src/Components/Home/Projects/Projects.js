@@ -5,7 +5,7 @@ import Project from './Project';
 const Projects = () => {
     const [projects , setProjects] = useState([]);
     useEffect(()=>{
-      fetch("http://localhost:5000/api/v1/projects")
+      fetch("https://my-portfolio-server-arifbiswas.vercel.app/api/v1/projects")
       .then(res=>res.json())
       .then(data=>{
         // console.log(data);
@@ -19,7 +19,7 @@ const Projects = () => {
 
 
     return (
-        <div  className='py-12  '>
+        <div  className='py-12 h-[100vh] '>
             <h2 className='text-3xl text-center mb-10 font-extrabold'>My Best Projects</h2>
            <div id='projects' className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
            {
