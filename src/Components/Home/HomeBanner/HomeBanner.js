@@ -15,18 +15,18 @@ const HomeBanner = () => {
             className="w-full lg:w-[50%] rounded-lg shadow-2xl flex justify-center"
           />
 
-          <div className="w-full lg:w-[50%] ">
+          <div className="w-full lg:w-[50%]  flex flex-col items-center">
             <motion.h1 
             initial={{opacity : 0, x : -20}}
-            animate={{opacity : 1,x : 20}}
+            animate={{opacity : 1,x : 0}}
             exit ={{x : 200}}
             transition={{duration : 0.5}}  
-            className="text-6xl lg:text-8xl font-bold text-center text-gray-200 mb-5">Arif Biswas</motion.h1>
+            className="text-5xl lg:text-8xl font-bold text-center text-gray-200 mb-5">Arif Biswas</motion.h1>
             <motion.h2
              initial={{opacity : 0, x : -20}}
-             animate={{opacity : 1,x : 20}}
+             animate={{opacity : 1,x :0}}
              transition={{duration : 0.6}}
-            className="text-3xl lg:text-4xl text-gray-200   font-bold text-center mb-10">Front-End Web Developer</motion.h2>
+            className="text-2xl lg:text-4xl text-gray-200   font-bold text-center mb-10">Front-End Web Developer</motion.h2>
            
           </div>
         </div>

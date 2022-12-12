@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion , } from "framer-motion"
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { FaFirefoxBrowser, FaGithub, FaLinkedin, FaRegFilePdf } from "react-icons/fa";
 const SingleProjects = () => {
   const data = useLoaderData();
@@ -13,7 +13,7 @@ const SingleProjects = () => {
              animate={{opacity : 1, y : 0}}
              transition={{duration : 0.5}}
           >
-            <h1 className="text-4xl lg:text-8xl text-center font-semibold text-white py-5">Project Detail</h1>
+            <h1 className="text-3xl lg:text-8xl text-center font-semibold text-white p-4 lg:py-5">Project Detail</h1>
           </motion.div>
       <motion.div
          initial ={{opacity : 0, y : -100}}
@@ -41,14 +41,17 @@ const SingleProjects = () => {
 </p>
           </motion.div>
           
-        <div className="flex justify-center gap-5 mt-5">
-        <button
-        className="btn btn-ghost bg-black text-lg flex justify-center lg:text-2xl text-white  w-[30%] my-5"><FaGithub></FaGithub><span className="ml-5">Github</span></button>
-          <button
-
-          className="btn btn-ghost bg-blue-500 text-white text-lg flex justify-center lg:text-2xl w-[30%] my-5"><FaLinkedin></FaLinkedin><span className="ml-5">LikedIn</span></button>
-          <button 
-          className="btn btn-ghost bg-red-700 text-white text-lg flex justify-center lg:text-2xl w-[30%] my-5"><FaFirefoxBrowser></FaFirefoxBrowser><span className="ml-5">Live Link</span></button>
+        <div className="flex justify-center gap-5 mb-10">
+        <Link 
+        to={data?.data?.githubClient}
+        className="btn btn-ghost bg-black text-lg flex justify-center lg:text-2xl text-white  w-[30%] my-5"><FaGithub></FaGithub><span className="ml-5"> CLient</span></Link>
+        <Link 
+        to={data?.data?.githubServer}
+        className="btn btn-ghost bg-black text-lg flex justify-center lg:text-2xl text-white  w-[30%] my-5"><FaGithub></FaGithub><span className="ml-5"> Server</span></Link>
+          
+          <Link 
+          to={data?.data?.githubLive} 
+          className="btn btn-ghost bg-red-700 text-white text-lg flex justify-center lg:text-2xl w-[30%] my-5"><FaFirefoxBrowser></FaFirefoxBrowser><span className="ml-5">Live</span></Link>
         </div>
         </div>
         <div

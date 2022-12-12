@@ -2,16 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion , } from "framer-motion"
 import { FaGithub, FaLinkedin, FaRegFilePdf } from "react-icons/fa";
-
+import resume from '../../Components/Home/Resume/resume.pdf'
 const About = () => {
   return (
-    <div className="h-[100vh]">
+    <div className="h-full lg:h-[100vh]">
          <motion.div
              initial ={{opacity : 0, y : -100}}
              animate={{opacity : 1, y : 0}}
              transition={{duration : 0.5}}
           >
-            <h1 className="text-4xl lg:text-8xl text-center text-white py-5">About</h1>
+            <h1 className="text-3xl lg:text-8xl text-center text-white p-4 lg:py-5">About</h1>
           </motion.div>
       <motion.div
          initial ={{opacity : 0, y : -100}}
@@ -42,14 +42,17 @@ python, c++, and all of the things I will gain through my hard work. And I will 
 </p>
           </motion.div>
           
-        <div className="flex justify-center gap-5 mt-5">
-        <button
-        className="btn btn-ghost bg-black text-lg flex justify-center lg:text-2xl text-white  w-[30%] my-5"><FaGithub></FaGithub><span className="ml-5">Github</span></button>
-          <button
+        <div className="flex justify-center gap-5 mb-12">
+        <a 
+        href="https://github.com/arifbiswas"
+        className="btn btn-ghost bg-black text-lg flex justify-center lg:text-2xl text-white  w-[30%] my-5"><FaGithub></FaGithub><span className="ml-5">Github</span></a>
+          <a 
+          href="https://www.linkedin.com/in/arifbiswas/"
 
-          className="btn btn-ghost bg-blue-500 text-white text-lg flex justify-center lg:text-2xl w-[30%] my-5"><FaLinkedin></FaLinkedin><span className="ml-5">LikedIn</span></button>
-          <button 
-          className="btn btn-ghost bg-red-700 text-white text-lg flex justify-center lg:text-2xl w-[30%] my-5"><FaRegFilePdf></FaRegFilePdf><span className="ml-5">Resume</span></button>
+          className="btn btn-ghost bg-blue-500 text-white text-lg flex justify-center lg:text-2xl w-[30%] my-5"><FaLinkedin></FaLinkedin><span className="ml-5">LikedIn</span></a>
+          <a 
+          href={resume} 
+          className="btn btn-ghost bg-red-700 text-white text-lg flex justify-center lg:text-2xl w-[30%] my-5"><FaRegFilePdf></FaRegFilePdf><span className="ml-5">Resume</span></a>
         </div>
         </div>
         <div

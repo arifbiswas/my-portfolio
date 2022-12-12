@@ -9,12 +9,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("./Assets/coverimg2.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+  background-image: url("./Assets/Cover.jpg");
+  /* background-repeat: no-repeat; */
+  /* background-size: 100%; */
+  /* background-position: center; */
+  scroll-behavior: smooth;
+  /* background-attachment: fixed; */
+  /* background-size: cover; */
 }
 
 code {
